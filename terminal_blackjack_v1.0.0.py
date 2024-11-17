@@ -730,7 +730,7 @@ You lost ${bet}''',0.05,"\n")
 
                 if aceCount(dealer)==0:
                     wordAnimation("Dealer's hand value: "+str(handValue(dealer,aceCount(dealer))-holeCard())+" + ?",0.05,"\n\n")
-                if aceCount(dealer)>0 and handValue(dealer,aceCount(dealer))-holeCard()<=11:
+                if aceCount(dealer)>0 and handValue(dealer,aceCount(dealer))-holeCard()<11:
                     wordAnimation("Dealer's hand value: "+str(handValue(dealer,aceCount(dealer))-holeCard())+" + ? | "+str(handValue(dealer,aceCount(dealer))-holeCard()+10)+" + ?",0.05,"\n\n")
 
                 wordAnimation("Your hand: "+str(playerShowHand()),0.05,"\n")
