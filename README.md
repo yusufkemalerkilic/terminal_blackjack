@@ -1,5 +1,7 @@
 # EN:
 
+![Welcome to the game of terminal_blackjack!](https://github.com/yusufkemalerkilic/file_storage/blob/main/terminal_blackjack_animation.gif)
+
 **Name:** terminal_blackjack
 
 **Version:** *v1.0.0*
@@ -46,6 +48,8 @@ If the player chooses EXIT, the game ends.
 
 
 # TR:
+
+![terminal_blackjack oyununa hoş geldiniz!](https://github.com/yusufkemalerkilic/file_storage/blob/main/terminal_blackjack_animation_turkish.gif)
 
 **İsim:** terminal_blackjack
 
