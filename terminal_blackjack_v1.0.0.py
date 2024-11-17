@@ -115,6 +115,15 @@ deck=[  "[♠ A ♠]","[♥ A ♥]","[♦ A ♦]","[♣ A ♣]",   # EN: A deck 
         "[♠ K ♠]","[♥ K ♥]","[♦ K ♦]","[♣ K ♣]"
         ]
 
+def clearScreen():  # EN: The function for clearing the screen is defined.
+                    # TR: Ekranı temizlemek için fonksiyon tanımlanır.
+
+    if os.name=="nt":
+        os.system("cls")
+
+    else:
+        os.system("clear")
+
 def wordAnimation(word,interval,endOfText): # EN: The function for word animations is defined.
                                             # TR: Kelime animasyonları için fonksiyon tanımlanır.
 
@@ -139,7 +148,7 @@ def budgetAnimation():              # EN: The function for budget animations is 
         else:
             print("Budget: $"+str(i),end="",flush=True)
 
-        os.system("cls")
+        clearScreen()
 
     print("Budget: $"+str(budget),flush=True)
 
@@ -507,7 +516,7 @@ def help(): # EN: The function for the help screen is defined.
             # TR: Yardım ekranı için fonksiyon tanımlanır.
 
 
-    os.system("cls")
+    clearScreen()
 
     wordAnimation("Welcome to the game of Terminal Blackjack!",0.025,"\n\n")
     wordAnimation("Developed by Yusuf Kemal Erkılıç",0.025,"\n\n")
@@ -542,7 +551,7 @@ def help(): # EN: The function for the help screen is defined.
 
 
 
-os.system("cls")    # EN: The screen is cleared.
+clearScreen()    # EN: The screen is cleared.
                     # TR: Ekran temizlenir.
 
 wordAnimation("Welcome to the game of Terminal Blackjack!",0.05,"\n")   # EN: The welcome message is displayed.
@@ -564,7 +573,7 @@ input()
 while True: # EN: The main menu is created.
             # TR: Ana menü oluşturulur.
 
-    os.system("cls")    # EN: The screen is cleared.
+    clearScreen()    # EN: The screen is cleared.
                         # TR: Ekran temizlenir.
 
     budgetAnimation()   # EN: The budget animation is displayed.
@@ -580,7 +589,7 @@ while True: # EN: The main menu is created.
     if choice=="1" or choice.upper()=="PLAY" or choice.upper()=="P":    # EN: If the player chooses PLAY, the game starts.
                                                                         # TR: Oyuncu OYNA seçeneğini seçerse, oyun başlar.
 
-        os.system("cls")    # EN: The screen is cleared.
+        clearScreen()    # EN: The screen is cleared.
                             # TR: Ekran temizlenir.
 
         wordAnimation(str("Budget: $"+str(budget)),0.05,"\n")   # EN: The budget is displayed.
@@ -593,7 +602,7 @@ while True: # EN: The main menu is created.
         while not bet.isdigit() or int(bet)>budget or int(bet)<=0:  # EN: If the player enters an invalid bet, the player is asked to enter a valid bet.
                                                                     # TR: Eğer oyuncu geçersiz bir bahis girerse, oyuncudan geçerli bir bahis girmesi istenir.
 
-            os.system("cls")
+            clearScreen()
 
             if not bet.isdigit():
                 wordAnimation("Invalid input!",0.05,"\n")
@@ -609,11 +618,11 @@ while True: # EN: The main menu is created.
 
             bet=input()
 
-            os.system("cls")
+            clearScreen()
 
         bet=int(bet)
 
-        os.system("cls")    # EN: The screen is cleared.
+        clearScreen()    # EN: The screen is cleared.
                             # TR: Ekran temizlenir.
 
         wordAnimation("Dealing cards",0.05,"")  # EN: The animation for dealing cards is displayed.
@@ -631,7 +640,7 @@ while True: # EN: The main menu is created.
                     time.sleep(0.5)
                     print(".",end="",flush=True)
                 time.sleep(0.5)
-                os.system("cls")
+                clearScreen()
                 print("Dealing cards",end="",flush=True)
 
         player=[]   # EN: The player's hand is defined.
@@ -657,14 +666,14 @@ while True: # EN: The main menu is created.
 
         while True:
             
-            os.system("cls")    # EN: The screen is cleared.
+            clearScreen()    # EN: The screen is cleared.
                                 # TR: Ekran temizlenir.
 
             # EN: All possible results are checked and messages are displayed according to the result.
             # TR: Bütün olası sonuçlar kontrol edilir ve sonuca göre mesajlar gösterilir.
 
             if handValue(player,aceCount(player))==21 and handValue(dealer,aceCount(dealer))!=21 and len(player)==2:
-                os.system("cls")
+                clearScreen()
                 wordAnimation("Dealer's hand: "+str(dealerShowHandOpen()),0.05,"\n")
                 wordAnimation("Dealer's hand value: "+str(handValue(dealer,aceCount(dealer))),0.05,"\n\n")
                 wordAnimation("Your hand: "+str(playerShowHand()),0.05,"\n")
@@ -677,7 +686,7 @@ You won ${float(bet)*1.5}''',0.05,"\n")
                 break
 
             if handValue(player,aceCount(player))==21 and handValue(dealer,aceCount(dealer))!=21 and len(player)>2:
-                os.system("cls")
+                clearScreen()
                 wordAnimation("Dealer's hand: "+str(dealerShowHandOpen()),0.05,"\n")
                 wordAnimation("Dealer's hand value: "+str(handValue(dealer,aceCount(dealer))),0.05,"\n\n")
                 wordAnimation("Your hand: "+str(playerShowHand()),0.05,"\n")
@@ -690,7 +699,7 @@ You won ${bet}''',0.05,"\n")
                 break
 
             if handValue(player,aceCount(player))>21 and handValue(dealer,aceCount(dealer))<=21:
-                os.system("cls")
+                clearScreen()
                 wordAnimation("Dealer's hand: "+str(dealerShowHandOpen()),0.05,"\n")
                 wordAnimation("Dealer's hand value: "+str(handValue(dealer,aceCount(dealer))),0.05,"\n\n")
                 wordAnimation("Your hand: "+str(playerShowHand()),0.05,"\n")
@@ -703,7 +712,7 @@ You lost ${bet}''',0.05,"\n")
                 break
 
             if handValue(player,aceCount(player))>21 and handValue(dealer,aceCount(dealer))>21:
-                os.system("cls")
+                clearScreen()
                 wordAnimation("Dealer's hand: "+str(dealerShowHandOpen()),0.05,"\n")
                 wordAnimation("Dealer's hand value: "+str(handValue(dealer,aceCount(dealer))),0.05,"\n\n")
                 wordAnimation("Your hand: "+str(playerShowHand()),0.05,"\n")
@@ -714,7 +723,7 @@ You lost ${bet}''',0.05,"\n")
                 break
 
             else:
-                os.system("cls")
+                clearScreen()
 
                 wordAnimation("Dealer's hand: "+str(dealerShowHand()),0.05,"\n")
 
@@ -739,7 +748,7 @@ You lost ${bet}''',0.05,"\n")
             if move=="1" or move.upper()=="HIT" or move.upper()=="H":   # EN: If the player chooses HIT, the player draws a card.
                                                                         # TR: Eğer oyuncu HIT (kart çekme) seçeneğini seçerse, oyuncu bir kart çeker.
 
-                os.system("cls")
+                clearScreen()
                 player.append(deck.pop())
                 wordAnimation("You drew "+str(player[-1]),0.05,"\n")
                 time.sleep(1.5)
@@ -753,14 +762,14 @@ You lost ${bet}''',0.05,"\n")
             elif move=="2" or move.upper()=="STAND" or move.upper()=="S":   # EN: If the player chooses STAND, the player's turn ends and the dealer's turn starts.
                                                                             # TR: Eğer oyuncu STAND (pas) seçeneğini seçerse, oyuncunun sırası biter ve dağıtıcının sırası başlar.
 
-                os.system("cls")
+                clearScreen()
 
                 while handValue(dealer,aceCount(dealer))<17:    # EN: The dealer draws cards until the hand value is at least 17.
                                                                 # TR: Dağıtıcı el değeri en az 17 olana kadar kart çeker.
 
                     dealerDrawCard()
 
-                os.system("cls")    # EN: The screen is cleared.
+                clearScreen()    # EN: The screen is cleared.
                                     # TR: Ekran temizlenir.
 
                 # EN: The result of the game is displayed.
@@ -785,8 +794,8 @@ You lost ${bet}''',0.05,"\n")
 
     if choice=="3" or choice.upper()=="EXIT" or choice.upper()=="E":    # EN: If the player chooses EXIT, the game ends.
                                                                         # TR: Oyuncu ÇIKIŞ (EXIT) seçeneğini seçerse, oyun sonlanır.
-        os.system("cls")
+        clearScreen()
         wordAnimation("Thank you for playing Terminal Blackjack!",0.05,"\n")
         time.sleep(1.5)
-        os.system("cls")
+        clearScreen()
         break
