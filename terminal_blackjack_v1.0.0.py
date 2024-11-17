@@ -552,7 +552,7 @@ def help(): # EN: The function for the help screen is defined.
 
 
 clearScreen()    # EN: The screen is cleared.
-                    # TR: Ekran temizlenir.
+                 # TR: Ekran temizlenir.
 
 wordAnimation("Welcome to the game of Terminal Blackjack!",0.05,"\n")   # EN: The welcome message is displayed.
                                                                         # TR: Hoşgeldiniz mesajı gösterilir.
@@ -574,7 +574,7 @@ while True: # EN: The main menu is created.
             # TR: Ana menü oluşturulur.
 
     clearScreen()    # EN: The screen is cleared.
-                        # TR: Ekran temizlenir.
+                     # TR: Ekran temizlenir.
 
     budgetAnimation()   # EN: The budget animation is displayed.
                         # TR: Bütçe animasyonu gösterilir.
@@ -585,12 +585,13 @@ while True: # EN: The main menu is created.
     wordAnimation("Enter your choice: ",0.05,"")
 
     choice=input()  # EN: The player's choice is taken.
+                    # TR: Oyuncunun seçimi alındı.
 
     if choice=="1" or choice.upper()=="PLAY" or choice.upper()=="P":    # EN: If the player chooses PLAY, the game starts.
                                                                         # TR: Oyuncu OYNA seçeneğini seçerse, oyun başlar.
 
         clearScreen()    # EN: The screen is cleared.
-                            # TR: Ekran temizlenir.
+                         # TR: Ekran temizlenir.
 
         wordAnimation(str("Budget: $"+str(budget)),0.05,"\n")   # EN: The budget is displayed.
                                                                 # TR: Bütçe gösterilir.
@@ -623,7 +624,7 @@ while True: # EN: The main menu is created.
         bet=int(bet)
 
         clearScreen()    # EN: The screen is cleared.
-                            # TR: Ekran temizlenir.
+                         # TR: Ekran temizlenir.
 
         wordAnimation("Dealing cards",0.05,"")  # EN: The animation for dealing cards is displayed.
                                                 # TR: Kartların dağıtılıyor olduğunu belirten bir animasyon devreye girer.
@@ -667,7 +668,7 @@ while True: # EN: The main menu is created.
         while True:
             
             clearScreen()    # EN: The screen is cleared.
-                                # TR: Ekran temizlenir.
+                             # TR: Ekran temizlenir.
 
             # EN: All possible results are checked and messages are displayed according to the result.
             # TR: Bütün olası sonuçlar kontrol edilir ve sonuca göre mesajlar gösterilir.
@@ -770,7 +771,7 @@ You lost ${bet}''',0.05,"\n")
                     dealerDrawCard()
 
                 clearScreen()    # EN: The screen is cleared.
-                                    # TR: Ekran temizlenir.
+                                 # TR: Ekran temizlenir.
 
                 # EN: The result of the game is displayed.
                 # TR: Oyunun sonucu gösterilir.
