@@ -4,7 +4,7 @@
 
 **Name:** terminal_blackjack
 
-**Version:** *v1.0.0*
+**Version:** *v1.1.0*
 
 **Author:** Yusuf Kemal Erkılıç
 
@@ -45,7 +45,7 @@ The player ends the game and returns to the main menu.
 If the player chooses HELP, the player receives information about the game.
 If the player chooses EXIT, the game ends.
 
-
+![terminal_blackjack gameplay](https://github.com/yusufkemalerkilic/file_storage/blob/main/terminal_blackjack_v1.1.0_new_release_animation.gif)
 
 # TR:
 
@@ -53,7 +53,7 @@ If the player chooses EXIT, the game ends.
 
 **İsim:** terminal_blackjack
 
-**Sürüm:** *v1.0.0*
+**Sürüm:** *v1.1.0*
 
 **Yazar:** Yusuf Kemal Erkılıç
 
@@ -93,3 +93,5 @@ Eğer iki tarafta Blackjack yaparsa, el berabere biter ve oyuncunun bahsi geri �
 Oyuncu, oyunu bitirir ve ana menüye döner.
 Oyuncu, YARDIM seçeneğini seçerse, oyun hakkında bilgi alır.
 Oyuncu, ÇIKIŞ seçeneğini seçerse, oyunu sonlandırır.
+
+![terminal_blackjack gameplay](https://github.com/yusufkemalerkilic/file_storage/blob/main/terminal_blackjack_v1.1.0_new_release_animation.gif)
