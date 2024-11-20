@@ -1584,7 +1584,7 @@ while True: # EN: The main menu is created.
             wordAnimation("You have reached over $1000!",0.05,"\n")
             wordAnimation("If you didn't do it by tampering with the code (which is called cheating!), good job!",0.05,"\n")
             wordAnimation("You have completed the game!",0.05,"\n")
-            wordAnimation("Feel free to explore my other projects on GitHub! https://github.com/yusufkemalerkilic",0.05,"")
+            wordAnimation("Feel free to explore my other projects on GitHub! https://github.com/yusufkemalerkilic",0.05,"\n\n")
             wordAnimation("You are a true ",0.05,"")
             wordAnimation("BLACKJACK MASTER!",0.5,"\n\n")
 
