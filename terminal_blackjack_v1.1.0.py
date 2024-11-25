@@ -1761,7 +1761,7 @@ while True: # EN: The main menu is created.
                     # TR: Dağıtıcının eli tanımlanır.
 
         deck=[  "[♠ A ♠]","[♥ A ♥]","[♦ A ♦]","[♣ A ♣]",   # EN: The deck is reshuffled.
-                "[♠ 2 ♠]","[♥ 2 ♥]","[♦ 2 ♦]","[♣ 2 ♣]",           # TR: Deste yeniden oluşturulur.
+                "[♠ 2 ♠]","[♥ 2 ♥]","[♦ 2 ♦]","[♣ 2 ♣]",   # TR: Deste yeniden oluşturulur.
                 "[♠ 3 ♠]","[♥ 3 ♥]","[♦ 3 ♦]","[♣ 3 ♣]",
                 "[♠ 4 ♠]","[♥ 4 ♥]","[♦ 4 ♦]","[♣ 4 ♣]",
                 "[♠ 5 ♠]","[♥ 5 ♥]","[♦ 5 ♦]","[♣ 5 ♣]",
